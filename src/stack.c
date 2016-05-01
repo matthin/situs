@@ -1,6 +1,10 @@
 #include "situs/stack.h"
 #include <stdlib.h>
 
+void st_stack_free(STStack *stack) {
+  while (st_stack_pop(stack) != NULL);
+}
+
 void st_stack_push(STStack *stack, void *element) {
   STNode *node = malloc(sizeof(STNode));
   node->data = element;

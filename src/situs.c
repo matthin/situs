@@ -14,6 +14,7 @@ int main() {
   st_stack_push(&stack, "stack test1");
   st_stack_push(&stack, "stack test2");
   printf("%s\n", st_stack_pop(&stack));
+  st_stack_free(&stack);
 
   return 0;
 }
