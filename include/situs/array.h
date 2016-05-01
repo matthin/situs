@@ -13,7 +13,7 @@ void st_array_new(STArray *array);
 void st_array_free(STArray *array);
 
 void st_array_push(STArray *array, void *element);
-void *st_array_get(STArray *array, size_t index);
+void *st_array_get(const STArray *array, size_t index);
 void st_array_remove(STArray *array, size_t index);
 
 void st_array_resize(STArray *array);

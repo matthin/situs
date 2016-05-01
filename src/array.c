@@ -20,7 +20,7 @@ void st_array_push(STArray *array, void *element) {
   array->elements[array->length++] = element;
 }
 
-void *st_array_get(STArray *array, const size_t index) {
+void *st_array_get(const STArray *array, const size_t index) {
   return array->elements[index];
 }
 
