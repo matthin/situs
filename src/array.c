@@ -28,8 +28,11 @@ void st_array_remove(STArray *array, size_t index) {
   while (index < array->length) {
     array->elements[index] = array->elements[++index];
   }
-
   array->length--;
+
+  if (array->reserved_length > (array->length + 50) * 3) {
+    st_array_resize(array);
+  }
 }
 
 void st_array_resize(STArray *array) {
