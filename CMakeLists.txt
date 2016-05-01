@@ -14,6 +14,7 @@ add_library(
 )
 
 add_definitions(-std=gnu11)
+set(CMAKE_CXX_FLAGS -Wall -Wextra -pedantic)
 
 add_executable(situsApp src/situs.c)
 target_link_libraries(situsApp situs)
